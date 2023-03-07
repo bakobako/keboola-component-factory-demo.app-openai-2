@@ -2,18 +2,24 @@
   "type": "object",
   "title": "extractor configuration",
   "required": [
-    "print_hello"
+    "#api_token", "text_column", "base_prompt"
   ],
   "properties": {
-    "print_hello": {
-      "type": "boolean",
-      "title": "Print Hello",
+    "#api_token": {
+      "type": "string",
+      "format": "password",
+      "title": "Api token",
       "propertyOrder": 1
     },
-    "debug": {
-      "type": "boolean",
-      "title": "Debug",
+    "text_column": {
+      "type": "string",
+      "title": "Text Column",
       "propertyOrder": 2
+    },
+    "base_prompt": {
+      "type": "string",
+      "title": "Base Prompt",
+      "propertyOrder": 3
     }
   }
 }
